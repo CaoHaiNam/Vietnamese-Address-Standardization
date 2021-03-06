@@ -24,7 +24,7 @@ python Test.py
 ```python
 import keras, Siameser
 sia = Siameser.Siameser()
-add = 'hoang mai ha noi"
+add = 'vinh hung vinh loc thanh hoa"
 sia.standardize(add) 
 ```
 
