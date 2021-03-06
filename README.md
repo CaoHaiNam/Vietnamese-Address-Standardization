@@ -9,7 +9,9 @@ pip install -r reqirements.txt <br>
 ### Access folder containing Siamese, open terminal, and run code:<br>
 cd Siameser <br>
 python <br>
+```python
 import keras, Siameser <br>
 sia = Siameser.Siameser() <br>
 add = 'hoang mai ha noi" <br>
 sia.standardize(add) 
+```
