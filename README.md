@@ -10,8 +10,8 @@ pip install -r reqirements.txt <br>
 cd Siameser <br>
 python <br>
 ```python
-import keras, Siameser <br>
-sia = Siameser.Siameser() <br>
-add = 'hoang mai ha noi" <br>
+import keras, Siameser
+sia = Siameser.Siameser()
+add = 'hoang mai ha noi"
 sia.standardize(add) 
 ```
