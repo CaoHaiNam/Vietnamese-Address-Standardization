@@ -1,8 +1,6 @@
 # Siameser
 
-An python client on Vietnamese Address Standardization problem.
-
-This tutorial was written for ```Ubuntu```. To run on other OS such as ```Window```, please find the corresponding commands.
+An python client on Vietnamese Address Standardization problem based on deep learning. Models was built on real dataset, which was labeled by hand.
 
 ### Requirements
 
