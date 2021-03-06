@@ -4,8 +4,6 @@ An python client on Vietnamese Address Standardization problem.
 
 This tutorial was written for ```Ubuntu```. To run on other OS such as ```Window```, please find the corresponding commands.
 
-### How it works
-
 ### Requirements
 
 ##### Python
