@@ -22,6 +22,7 @@ pip install -r requirements.txt
 python Test.py
 ```
 
+##### Run code in command line:
 ```python
 import keras, Siameser
 sia = Siameser.Siameser()
