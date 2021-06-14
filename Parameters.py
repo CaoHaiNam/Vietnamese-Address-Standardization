@@ -23,6 +23,9 @@ NORM_EMBEDDING_FILE    = os.path.join(WORKING_DIR, 'Data/norm.npy')
 NT_NORM_EMBEDDING_FILE = os.path.join(WORKING_DIR, 'Data/NT_norm.npy')
 
 AD_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/AD_model/SNN_100_epoches.snn')
+Add_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/Add_model/SNN_100_epoches.snn')
+Merge_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/Merge_model/SNN_100_epoches.snn')
+ElementWise_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/ElementWise_model/SNN_100_epoches.snn')
 
 # CRF
 CRF_MODEL_FILE         = os.path.join(WORKING_DIR, 'CRF/crf_rat_3.model')
