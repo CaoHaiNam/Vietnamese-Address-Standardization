@@ -12,10 +12,17 @@ import bert
 
 
 class Siameser:
-    def __init__(self):
+    def __init__(self, model_name):
         print('Load model')
-        self.model = tf.keras.models.load_model(AD_MODEL_FILE)
-
+        if model_name == 'AD':
+            self.model = tf.keras.models.load_model(AD_MODEL_FILE)
+        elif model_name == 'Add':
+            self.model = tf.keras.models.load_model(Add_MODEL_FILE)
+        elif model_name == 'Megge':
+            self.model = tf.keras.models.load_model(Merge_MODEL_FILE)
+        elif model_name == 'ElementWise':
+            self.model = tf.keras.models.load_model(ElementWise_MODEL_FILE)
+        
         print('Load encode model')
         self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
         
