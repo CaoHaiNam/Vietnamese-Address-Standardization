@@ -18,7 +18,7 @@ class Siameser:
             self.model = tf.keras.models.load_model(AD_MODEL_FILE)
         elif model_name == 'Add':
             self.model = tf.keras.models.load_model(Add_MODEL_FILE)
-        elif model_name == 'Megge':
+        elif model_name == 'Merge':
             self.model = tf.keras.models.load_model(Merge_MODEL_FILE)
         elif model_name == 'ElementWise':
             self.model = tf.keras.models.load_model(ElementWise_MODEL_FILE)
