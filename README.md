@@ -20,9 +20,10 @@ python Test.py
 
 ##### Run code in command line:
 ```python
-import keras, Siameser
-sia = Siameser.Siameser()
+import Siameser
+# I introduce 4 models, AD model, Add model. Merge model and ElementWise model
+std = Siameser.Siameser('AD')
 add = 'vinh hung vinh loc thanh hoa"
-sia.standardize(add) 
+std.standardize(add) 
 ```
 
