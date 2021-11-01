@@ -20,6 +20,7 @@ python Test.py
 
 ##### Run code in command line:
 ```python
+import keras
 import Siameser
 # I introduce 4 models, AD model, Add model. Merge model and ElementWise model
 std = Siameser.Siameser('AD')
