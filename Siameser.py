@@ -58,7 +58,8 @@ class Siameser:
             x = self.model.predict([noisy_add_vectors, self.norm_embeddings]).reshape(num_of_norm,)
 
         x = np.argmax(x, axis=0)
-        print(self.NORM_ADDS['data'][x]['std_add'])
+        # print(self.NORM_ADDS['data'][x]['std_add'])
+        return self.NORM_ADDS['data'][x]['std_add']
 
 # siameser = Siameser()
 # siameser.standardize('vinh hung vinh loc thanh hoa')
