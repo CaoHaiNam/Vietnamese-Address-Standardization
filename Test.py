@@ -7,8 +7,9 @@ import timeit
 import os
 
 start = timeit.default_timer()
-siameser = Siameser()
-siameser.standardize('hoang mai ha noi') 
+siameser = Siameser('AD')
+std_add = siameser.standardize('hoang mai ha noi')
+print(std_add) 
 stop = timeit.default_timer()
 print(stop - start)
 
