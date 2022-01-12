@@ -28,3 +28,14 @@ add = 'vinh hung vinh loc thanh hoa"
 std.standardize(add) 
 ```
 
+##### Ciation
+```pyrhon
+@inproceedings{cao2021deep,
+  title={Deep neural network based learning to rank for address standardization},
+  author={Cao, Hai-Nam and Tran, Viet-Trung},
+  booktitle={2021 RIVF International Conference on Computing and Communication Technologies (RIVF)},
+  pages={1--6},
+  year={2021},
+  organization={IEEE}
+}
+```
