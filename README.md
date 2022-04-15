@@ -1,6 +1,6 @@
 # Vietnamese-Address-Standardization
 
-An python client on Vietnamese Address Standardization problem based on deep learning. Models was built on real dataset, which was labeled by hand. For more detail about data to train and test model, please contact me via gmail: chnhust1@gmail.com
+An python client on Vietnamese Address Standardization problem based on deep learning. Models was built on real dataset, which was labeled by hand.
 
 ### Requirements
 
