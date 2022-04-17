@@ -23,7 +23,7 @@ class Siameser:
         elif model_name == 'ElementWise':
             self.model = tf.keras.models.load_model(ElementWise_MODEL_FILE)
         
-        print('Load encode model')
+        print("Load encode model (It could take up to 10 minutes or more. Let's take a coffee when waiting ^^)")
         self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
         
         print('Load standard address matrix')
