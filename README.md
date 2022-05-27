@@ -24,7 +24,7 @@ import keras
 import Siameser
 # I introduce 4 models, AD model, Add model. Merge model and ElementWise model
 std = Siameser.Siameser('AD')
-add = '150 kim hoa hà nội"
+add = '150 kim hoa hà nội'
 std_add = std.standardize(add)
 print(std_add)
 ```
