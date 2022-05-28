@@ -42,4 +42,4 @@ max_seq_length = 64
 model_url="https://tfhub.dev/google/LaBSE/1"
 
 # transformer model
-model_name = 'sentence-transformers/LaBSE'
+embedding_model = 'sentence-transformers/LaBSE'
