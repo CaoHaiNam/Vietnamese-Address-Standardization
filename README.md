@@ -10,12 +10,13 @@ Install requirements packages:
 ```sh
 pip install -r requirements.txt
 ```
-
-##### Express 2 file norm.zip and NT_norm.zip in folder data, and store in this folder <br>
+### Note
+##### Express 2 files norm.zip and NT_norm.zip in folder data, and store in this folder <br>
 
 ### Testing <br>
 ```sh
-python Test.py
+python Test.py --model_name AD \
+               --address '150 kim hoa ha noi'
 ```
 
 ##### Run code in command line:
