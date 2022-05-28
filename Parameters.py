@@ -41,4 +41,5 @@ entities2index = {'street': 0, 'ward': 1, 'district': 2, 'city': 3}
 max_seq_length = 64
 model_url="https://tfhub.dev/google/LaBSE/1"
 
-
+# transformer model
+model_name = 'sentence-transformers/LaBSE'
