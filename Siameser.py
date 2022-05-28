@@ -9,6 +9,8 @@ import keras
 import LaBSE
 import json
 import bert
+from sentence_transformers import SentenceTransformer
+import torch
 
 
 class Siameser:
@@ -23,8 +25,9 @@ class Siameser:
         elif model_name == 'ElementWise':
             self.model = tf.keras.models.load_model(ElementWise_MODEL_FILE)
         
-        print("Load encode model (It could take up to 10 minutes or more. Let's take a coffee when waiting ^^)")
-        self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
+        print("Load sentence embedding model (It could take up to 5 minutes. Let's take a coffee when waiting ^^)")
+        # self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
+        self.embedding_model = SentenceTransformer(embedding_model)
         
         print('Load standard address matrix')
         self.norm_embeddings = np.load(NORM_EMBEDDING_FILE, allow_pickle=True)
@@ -37,13 +40,14 @@ class Siameser:
         print('Done')
 
     def encode(self, input_text):
-        vocab_file = self.labse_layer.resolved_object.vocab_file.asset_path.numpy()
-        do_lower_case = self.labse_layer.resolved_object.do_lower_case.numpy()
-        tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case)
+        # vocab_file = self.labse_layer.resolved_object.vocab_file.asset_path.numpy()
+        # do_lower_case = self.labse_layer.resolved_object.do_lower_case.numpy()
+        # tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case)
 
-        input_ids, input_mask, segment_ids = LaBSE.create_input(input_text, tokenizer, max_seq_length)
+        # input_ids, input_mask, segment_ids = LaBSE.create_input(input_text, tokenizer, max_seq_length)
         
-        return self.labse_model([input_ids, input_mask, segment_ids])
+        # return self.labse_model([input_ids, input_mask, segment_ids])
+        return self.embedding_model.encode(input_text)
 
     def standardize(self, noisy_add):  
         noisy_add = unicodedata.normalize('NFC', noisy_add)
