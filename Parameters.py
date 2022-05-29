@@ -43,3 +43,4 @@ model_url="https://tfhub.dev/google/LaBSE/1"
 
 # transformer model
 embedding_model = 'sentence-transformers/LaBSE'
+local_embedding_model = 'sentence-transformer_LaBSE'
