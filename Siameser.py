@@ -11,6 +11,7 @@ import json
 import bert
 from sentence_transformers import SentenceTransformer
 import torch
+import os
 
 
 class Siameser:
@@ -27,7 +28,11 @@ class Siameser:
         
         print("Load sentence embedding model (It could take up to 5 minutes. Let's take a coffee when waiting ^^)")
         # self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
-        self.embedding_model = SentenceTransformer(embedding_model)
+        if os.path.isdir(local_embedding_model):
+            self.embedding_model = SentenceTransformer(local_embedding_model)
+        else:
+            self.embedding_model = SentenceTransformer(embedding_model)
+            self.embedding_model.save(local_embedding_model)
         
         print('Load standard address matrix')
         self.norm_embeddings = np.load(NORM_EMBEDDING_FILE, allow_pickle=True)
@@ -43,9 +48,7 @@ class Siameser:
         # vocab_file = self.labse_layer.resolved_object.vocab_file.asset_path.numpy()
         # do_lower_case = self.labse_layer.resolved_object.do_lower_case.numpy()
         # tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case)
-
         # input_ids, input_mask, segment_ids = LaBSE.create_input(input_text, tokenizer, max_seq_length)
-        
         # return self.labse_model([input_ids, input_mask, segment_ids])
         return self.embedding_model.encode(input_text)
 
