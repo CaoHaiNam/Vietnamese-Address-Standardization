@@ -26,7 +26,7 @@ class Siameser:
         elif model_name == 'ElementWise':
             self.model = tf.keras.models.load_model(ElementWise_MODEL_FILE)
         
-        print("Load sentence embedding model (It could take up to 5 minutes. Let's take a coffee when waiting ^^)")
+        print("Load sentence embedding model (If this is the first time you run this repo, It could be take time to download sentence embedding model)")
         # self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
         if os.path.isdir(local_embedding_model):
             self.embedding_model = SentenceTransformer(local_embedding_model)
