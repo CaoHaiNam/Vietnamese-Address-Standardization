@@ -5,3 +5,4 @@ numpy==1.18.5
 tensorflow_hub==0.10.0
 bert-for-tf2
 sentence-transformers
+transformers
