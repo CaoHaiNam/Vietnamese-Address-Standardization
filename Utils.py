@@ -1,9 +1,6 @@
 import numpy as np
 from Parameters import *
 import CRF
-import tensorflow as tf
-import tensorflow_hub as hub
-import bert
 
 # concat origin address vector with fields vector
 def concat(v, field_add_vector):
