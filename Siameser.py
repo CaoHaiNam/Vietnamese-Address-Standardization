@@ -55,7 +55,8 @@ class Siameser:
     def standardize(self, noisy_add):  
         noisy_add = unicodedata.normalize('NFC', noisy_add)
         type_add_vector = Utils.create_field_vector(noisy_add)
-        noisy_add = Preprocess.remove_punctuation(CRF.get_better_add(noisy_add)).lower()
+        # noisy_add = Preprocess.remove_punctuation(CRF.get_better_add(noisy_add)).lower()
+        noisy_add = Preprocess.remove_punctuation(noisy_add).lower()
         noisy_add_vector = Utils.concat(np.array(self.encode([noisy_add])), type_add_vector).reshape(dim,)
         noisy_add_vectors = np.full((num_of_norm, dim), noisy_add_vector)
 
