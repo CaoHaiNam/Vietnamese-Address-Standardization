@@ -1,0 +1,132 @@
+before address: Cẩm Sơn Cẩm Xuyên Hà Tĩnh
+after address: cẩm sơn, cẩm xuyên, hà tĩnh
+before address: Khóm 1 Phường 2 Bạc Liêu Bạc Liêu
+after address: phường 1, bạc liêu, bạc liêu
+before address: Suối Cam Xã Tiến Thành Tx Đồng Xoài Bình Phước
+after address: tiến hưng, đồng xoài, bình phước
+before address: Tân Lập Tân Hội Tân Hiệp Kiên Giang
+after address: tân hội, tân hiệp, kiên giang
+before address: Quảng Hùng Quảng Xương Thanh Hóa
+after address: quảng hùng, quảng xương, thanh hóa
+before address: Thiệu Nguyên Thiệu Hóa Thanh Hóa
+after address: thiệu nguyên, thiệu hóa, thanh hóa
+before address: 227/18 Nguyễn Chí Thanh P16 Q11 Tp Hồ Chí Minh
+after address: nguyễn xí, bình thạnh, hồ chí minh
+before address: Khánh Bình Tây Trần Văn Thời Cà Mau
+after address: khánh bình tây, trần văn thời, cà mau
+before address: Long Hòa Long Điền B Chợ Mới An Giang
+after address: long điền b, chợ mới, an giang
+before address: Thịnh Hưng Huyện Yên Bình Yên Bái
+after address: hưng định, thuận an, bình dương
+before address: Tổ 8 Văn Đăng 1 Vĩnh Lương Nha Trang Khánh Hòa
+after address: đan phượng, hà nội
+before address: Tân Thạnh Thạnh Nhựt Gò Công Tây Tiền Giang
+after address: thạnh nhựt, gò công tây, tiền giang
+before address: Dũng Tiến Huyện Thường Tín Hà Nội
+after address: dũng tiến, thường tín, hà nội
+before address: Tđp 13 Khánh Xuân Buôn Ma Thuột Đắk Lắk
+after address: phan kiệm, buôn ma thuột, đắk lắk
+before address: Khánh Thuận U Minh Cà Mau
+after address: khánh thuận, u minh, cà mau
+before address: Tổ 3 P Hương Hồ Tx Hương Trà Thừa Thiên Huế
+after address: ngọc khánh, ba đình, hà nội
+before address: Xã Đèo Gia Huyện Lục Ngan Bắc Giang
+after address: đèo gia, lục ngạn, bắc giang
+before address: Lay Nưa Tx Mường Lay Điện Biên
+after address: lay nưa, mường lay, điện biên
+before address: Bình Tân Bắc Bình Bình Thuận
+after address: bình tân, bắc bình, bình thuận
+before address: Ấp Phước Lễ Thành Triệu Châu Thành Bến Tre
+after address: tam đường, tam đường, lai châu
+before address: Nam Bình 2 Hòa Xuân Tây H Đông Hòa Phú Yên
+after address: hòa xuân nam, đông hòa, phú yên
+before address: Giang Kiên Bình An Lương Kiên Giang
+after address: vĩnh phú, giồng riềng, kiên giang
+before address: Nam Phong Phú Xuyên Hà Tây
+after address: nam phong, phú xuyên, hà nội
+before address: Thôn6 Nghĩa Trung Bù Đăng Bình Phước
+after address: trung hành 6, hải an, hải phòng
+before address: 150 Đườngssố 1 Kp2 P. Tân Kiểng Quận 7 Tp Hồ Chí Minh
+after address: đường 17, quận 7, hồ chí minh
+before address: Xã Biển Động Huyện Lục Ngan Bắc Giang
+after address: biên sơn, lục ngạn, bắc giang
+before address: Khương Ninh Long Bình Gò Công Tây Tiền Giang
+after address: cái dăm, hạ long, quảng ninh
+before address: Ngọc Thành Giồng Riểng Kiên Giang
+after address: ngọc thành, giồng riềng, kiên giang
+before address: Xuân Thọ Minh Quang Ba Vì Hà Nội
+after address: hai bà trưng, hà nội
+before address: Nam Thái A An Biên Kiên Giang
+after address: nam thái a, an biên, kiên giang
+before address: 159/13 Hùng Vương Phường 6 Tp Sóc Trăng Sóc Trăng
+after address: bạch sam, mỹ hào, hưng yên
+before address: X Phúc Thuận Tx Phố Yên Tt Thái Nguyên
+after address: phúc xuân, thái nguyên, thái nguyên
+before address: 18/1Na Thái Nha Trang Khánh Hòa Học
+after address: tân mỹ chánh, mỹ tho, tiền giang
+before address: Thôn Thượng Thụy Đức Thượng Hoài Đức Hà Nội
+after address: đức thượng, hoài đức, hà nội
+before address: Phong Hải Phong Điền Thừa Thiên Huế
+after address: phong hải, phong điền, thừa thiên huế
+before address: 120/1/22 Đồ Chiểu P 3 Vũng Tàu Br Vt
+after address: bình trị đông, bình tân, hồ chí minh
+before address: Hiền Ninh Quảng Ninh Quảng Bình
+after address: hiền ninh, quảng ninh, quảng bình
+before address: Xã Hà Bắc Huyện Hà Trung Thanh Hóa
+after address: hà bắc, hà trung, thanh hóa
+before address: An Phú Tân Qui Ii Tân Cầu Kè Trà Vinh
+after address: ao đôi, bình tân, hồ chí minh
+before address: Hải Minh Hải Hậu Nam Định
+after address: hải minh, hải hậu, nam định
+before address: Thuần Lôc Hậu Lộc Thanh Hóa
+after address: nguyên khiết, hoàn kiếm, hà nội
+before address: Tân Khánh Long Bình An Phú An Giang
+after address: khánh long, thuận an, bình dương
+before address: Xã Ngư Lộc Huyện Hậu Lộc Thanh Hóa
+after address: yết kiêu, hoàn kiếm, hà nội
+before address: Ninh Hiệp Ninh Quới A Hồng Dân Bạc Liêu
+after address: ninh quới, hồng dân, bạc liêu
+before address: Tt Hữu Lũng Hữu Lũng Lạng Sơn
+after address: yên hòa, cầu giấy, hà nội
+before address: 409/14A Ê Đức Thọ P16 Gv Tp Hồ Chí Minh
+after address: tạ mỹ duật, bình tân, hồ chí minh
+before address: 110/5A Quang Trung P12 Gv Tp Hồ Chí Minh
+after address: hạ long, quảng ninh
+before address: Quảng Tân Tuy Đức Đăk Nông
+after address: quảng tân, tuy đức, đắk nông
+before address: Xã Kiến Quốc Huyện Ninh Giang Hải Dương
+after address: kiến quốc, ninh giang, hải dương
+before address: Cam An Bắc Cam Lâm Khánh Hòa
+after address: cam an bắc, cam lâm, khánh hòa
+before address: Tiến Tới Hải Hà Quảng Ninh
+after address: tiến tới, hải hà, quảng ninh
+before address: 27/11B Xô Viết Nghệ Tĩnh P27 Bt Tp Hồ Chí Minh
+after address: khiêu năng tĩnh, tân bình, hồ chí minh
+before address: P Đồng Quang Tp Thái Nguyên T Thái Nguyên
+after address: đồng quang, thái nguyên, thái nguyên
+before address: Ấp 2 An Thái Trung Cái Bè Tiền Giang
+after address: an phú trung, củ chi, hồ chí minh
+before address: Tịnh Hòa Tp Quảng Ngãi Quảng Ngãi
+after address: mạc đĩnh chi, quảng ngãi, quảng ngãi
+before address: Ấp An Lợi An Bình A Tx Hồng Ngự Đồng Tháp
+after address: bảo ninh, đồng hới, quảng bình
+before address: 76 Võ Trung Thành Tân Tiến Buôn Ma Thuột Đắk Lắk
+after address: đường 76, quận 7, hồ chí minh
+before address: Xã Xuân Tường Huyện Thanh Chương Nghệ An
+after address: xuân diệu, sầm sơn, thanh hóa
+before address: Vạn Phú Vạn Ninh Khánh Hòa
+after address: vạn phú, vạn ninh, khánh hòa
+before address: Tân Bình Phụng Hiệp Hậu Giang
+after address: tân bình, phụng hiệp, hậu giang
+before address: Ấp 3 Bình Hòa H Giồng Trôm T Bến Tre
+after address: bình đường 3, thủ đức, hồ chí minh
+before address: L10 C14 Hẻm 90 Ng Bình Khiêm Tp Rạch Giá Kiên Giang
+after address: hòa thạnh, tân phú, hồ chí minh
+before address: Kp Xóm Rẫy Phước Bửu Xuyên Mộc Bà Rịa Vũng Tàu
+after address: đầm trấu, hai bà trưng, hà nội
+before address: Hàm Đức Hàm Thuận Bắc Bình Thuận
+after address: hàm đức, hàm thuận bắc, bình thuận
+before address: Trường Phước Trường Tây Hòa Thành Tây Ninh
+after address: trường tây, hòa thành, tây ninh
+before address: 1547/111 Đường 30/4 Phường 12 Vũng Tàu Bà Rịa Vũng Tàu
+after address: hợp hải, lâm thao, phú thọ

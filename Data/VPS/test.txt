@@ -1,0 +1,132 @@
+Address before: Cẩm Sơn Cẩm Xuyên Hà Tĩnh
+Address after: Cẩm Sơn, Cẩm Xuyên, Hà Tĩnh
+Address before: Khóm 1 Phường 2 Bạc Liêu Bạc Liêu
+Address after: Khóm 1, Phường 2, Bạc Liêu, Bạc Liêu
+Address before: Suối Cam Xã Tiến Thành Tx Đồng Xoài Bình Phước
+Address after: Suối Cam Xã Tiến Thành, TX. Đồng Xoài, Bình Phước
+Address before: Tân Lập Tân Hội Tân Hiệp Kiên Giang
+Address after: Tân Lập, Tân Hội, Tân Hiệp, Kiên Giang
+Address before: Quảng Hùng Quảng Xương Thanh Hóa
+Address after: Quảng Hùng, Quảng Xương, Thanh Hóa
+Address before: Thiệu Nguyên Thiệu Hóa Thanh Hóa
+Address after: Thiệu Nguyên, Thiệu Hóa, Thanh Hóa
+Address before: 227/18 Nguyễn Chí Thanh P16 Q11 Tp Hồ Chí Minh
+Address after: 227/18 Nguyễn Chí Thanh, P16, Q11, TP. Hồ Chí Minh
+Address before: Khánh Bình Tây Trần Văn Thời Cà Mau
+Address after: Khánh Bình Tây, Trần Văn Thời, Cà Mau
+Address before: Long Hòa Long Điền B Chợ Mới An Giang
+Address after: Long Hòa, Long Điền B, Chợ Mới, An Giang
+Address before: Thịnh Hưng Huyện Yên Bình Yên Bái
+Address after: Thịnh Hưng, Huyện Yên Bình, Yên Bái
+Address before: Tổ 8 Văn Đăng 1 Vĩnh Lương Nha Trang Khánh Hòa
+Address after: Tổ 8 Văn Đăng 1, Vĩnh Lương, Nha Trang, Khánh Hòa
+Address before: Tân Thạnh Thạnh Nhựt Gò Công Tây Tiền Giang
+Address after: Tân Thạnh, Thạnh Nhựt, Gò Công Tây, Tiền Giang
+Address before: Dũng Tiến Huyện Thường Tín Hà Nội
+Address after: Dũng Tiến, Huyện Thường Tín, Hà Nội
+Address before: Tđp 13 Khánh Xuân Buôn Ma Thuột Đắk Lắk
+Address after: Tđp 13, Khánh Xuân, Buôn Ma Thuột, Đắk Lắk
+Address before: Khánh Thuận U Minh Cà Mau
+Address after: Khánh Thuận, U Minh, Cà Mau
+Address before: Tổ 3 P Hương Hồ Tx Hương Trà Thừa Thiên Huế
+Address after: Tổ 3, P. Hương Hồ, TX. Hương Trà, Thừa Thiên Huế
+Address before: Xã Đèo Gia Huyện Lục Ngan Bắc Giang
+Address after: Xã Đèo Gia, Huyện Lục Ngan, Bắc Giang
+Address before: Lay Nưa Tx Mường Lay Điện Biên
+Address after: Lay Nưa, TX. Mường Lay, Điện Biên
+Address before: Bình Tân Bắc Bình Bình Thuận
+Address after: Bình Tân, Bắc Bình, Bình Thuận
+Address before: Ấp Phước Lễ Thành Triệu Châu Thành Bến Tre
+Address after: Ấp Phước Lễ, Thành Triệu, Châu Thành, Bến Tre
+Address before: Nam Bình 2 Hòa Xuân Tây H Đông Hòa Phú Yên
+Address after: Nam Bình 2 Hòa Xuân Tây H. Đông Hòa, Phú Yên
+Address before: Giang Kiên Bình An Lương Kiên Giang
+Address after:  Giang Kiên Bình An Lương, Kiên Giang
+Address before: Nam Phong Phú Xuyên Hà Tây
+Address after:  Nam Phong Phú Xuyên Hà Tây
+Address before: Thôn6 Nghĩa Trung Bù Đăng Bình Phước
+Address after: Thôn6 Nghĩa Trung, Bù Đăng, Bình Phước
+Address before: 150 Đườngssố 1 Kp2 P. Tân Kiểng Quận 7 Tp Hồ Chí Minh
+Address after: 150 Đườngssố 1 KP2 P. Tân Kiểng, Quận 7, TP. Hồ Chí Minh
+Address before: Xã Biển Động Huyện Lục Ngan Bắc Giang
+Address after: Xã Biển Động, Huyện Lục Ngan, Bắc Giang
+Address before: Khương Ninh Long Bình Gò Công Tây Tiền Giang
+Address after: Khương Ninh, Long Bình, Gò Công Tây, Tiền Giang
+Address before: Ngọc Thành Giồng Riểng Kiên Giang
+Address after: Ngọc Thành, Giồng Riềng, Kiên Giang
+Address before: Xuân Thọ Minh Quang Ba Vì Hà Nội
+Address after: Xuân Thọ, Minh Quang, Ba Vì, Hà Nội
+Address before: Nam Thái A An Biên Kiên Giang
+Address after: Nam Thái A, An Biên, Kiên Giang
+Address before: 159/13 Hùng Vương Phường 6 Tp Sóc Trăng Sóc Trăng
+Address after: 159/13 Hùng Vương, Phường 6, TP. Sóc Trăng, Sóc Trăng
+Address before: X Phúc Thuận Tx Phố Yên Tt Thái Nguyên
+Address after: X Phúc Thuận, TX. Phố Yên Tt, Thái Nguyên
+Address before: 18/1Na Thái Nha Trang Khánh Hòa Học
+Address after:  18/1Na Thái Nha Trang Khánh Hòa Học
+Address before: Thôn Thượng Thụy Đức Thượng Hoài Đức Hà Nội
+Address after: Thôn Thượng Thụy, Đức Thượng, Hoài Đức, Hà Nội
+Address before: Phong Hải Phong Điền Thừa Thiên Huế
+Address after: Phong Hải, Phong Điền, Thừa Thiên Huế
+Address before: 120/1/22 Đồ Chiểu P 3 Vũng Tàu Br Vt
+Address after:  120/1/22 Đồ Chiểu, P. 3 Vũng Tàu Br Vt
+Address before: Hiền Ninh Quảng Ninh Quảng Bình
+Address after: Hiền Ninh, Quảng Ninh, Quảng Bình
+Address before: Xã Hà Bắc Huyện Hà Trung Thanh Hóa
+Address after: Xã Hà Bắc, Huyện Hà Trung, Thanh Hóa
+Address before: An Phú Tân Qui Ii Tân Cầu Kè Trà Vinh
+Address after: An Phú Tân Qui Ii Tân, Cầu Kè, Trà Vinh
+Address before: Hải Minh Hải Hậu Nam Định
+Address after: Hải Minh, Hải Hậu, Nam Định
+Address before: Thuần Lôc Hậu Lộc Thanh Hóa
+Address after: Thuần Lôc, Hậu Lộc, Thanh Hóa
+Address before: Tân Khánh Long Bình An Phú An Giang
+Address after: Tân Khánh Long Bình, An Phú, An Giang
+Address before: Xã Ngư Lộc Huyện Hậu Lộc Thanh Hóa
+Address after: Xã Ngư Lộc, Huyện Hậu Lộc, Thanh Hóa
+Address before: Ninh Hiệp Ninh Quới A Hồng Dân Bạc Liêu
+Address after: Ninh Hiệp, Ninh Quới A, Hồng Dân, Bạc Liêu
+Address before: Tt Hữu Lũng Hữu Lũng Lạng Sơn
+Address after: Tt Hữu Lũng, Hữu Lũng, Lạng Sơn
+Address before: 409/14A Ê Đức Thọ P16 Gv Tp Hồ Chí Minh
+Address after: 409/14A Ê Đức Thọ, P16 Gv, TP. Hồ Chí Minh
+Address before: 110/5A Quang Trung P12 Gv Tp Hồ Chí Minh
+Address after: 110/5A Quang Trung, P12 Gv, TP. Hồ Chí Minh
+Address before: Quảng Tân Tuy Đức Đăk Nông
+Address after: Quảng Tân, Tuy Đức, Đắk Nông
+Address before: Xã Kiến Quốc Huyện Ninh Giang Hải Dương
+Address after: Xã Kiến Quốc, Huyện Ninh Giang, Hải Dương
+Address before: Cam An Bắc Cam Lâm Khánh Hòa
+Address after: Cam An Bắc, Cam Lâm, Khánh Hòa
+Address before: Tiến Tới Hải Hà Quảng Ninh
+Address after: Tiến Tới, Hải Hà, Quảng Ninh
+Address before: 27/11B Xô Viết Nghệ Tĩnh P27 Bt Tp Hồ Chí Minh
+Address after: 27/11B Xô Viết Nghệ Tĩnh, P27 Bt, TP. Hồ Chí Minh
+Address before: P Đồng Quang Tp Thái Nguyên T Thái Nguyên
+Address after: P. Đồng Quang, TP. Thái Nguyên, Thái Nguyên
+Address before: Ấp 2 An Thái Trung Cái Bè Tiền Giang
+Address after: Ấp, An Thái Trung, Cái Bè, Tiền Giang
+Address before: Tịnh Hòa Tp Quảng Ngãi Quảng Ngãi
+Address after: Tịnh Hòa, TP. Quảng Ngãi, Quảng Ngãi
+Address before: Ấp An Lợi An Bình A Tx Hồng Ngự Đồng Tháp
+Address after: Ấp An Lợi An Bình A, TX. Hồng Ngự, Đồng Tháp
+Address before: 76 Võ Trung Thành Tân Tiến Buôn Ma Thuột Đắk Lắk
+Address after: 76 Võ Trung Thành, Tân Tiến, Buôn Ma Thuột, Đắk Lắk
+Address before: Xã Xuân Tường Huyện Thanh Chương Nghệ An
+Address after: Xã Xuân Tường, Huyện Thanh Chương, Nghệ An
+Address before: Vạn Phú Vạn Ninh Khánh Hòa
+Address after: Vạn Phú, Vạn Ninh, Khánh Hòa
+Address before: Tân Bình Phụng Hiệp Hậu Giang
+Address after: Tân Bình, Phụng Hiệp, Hậu Giang
+Address before: Ấp 3 Bình Hòa H Giồng Trôm T Bến Tre
+Address after:  Ấp 3 Bình Hòa H Giồng Trôm T, Bến Tre
+Address before: L10 C14 Hẻm 90 Ng Bình Khiêm Tp Rạch Giá Kiên Giang
+Address after: L10, C14 Hẻm 90 Ng Bình Khiêm, TP. Rạch Giá, Kiên Giang
+Address before: Kp Xóm Rẫy Phước Bửu Xuyên Mộc Bà Rịa Vũng Tàu
+Address after: KP. Xóm Rẫy, Phước Bửu, Xuyên Mộc, Bà Rịa - Vũng Tàu
+Address before: Hàm Đức Hàm Thuận Bắc Bình Thuận
+Address after: Hàm Đức, Hàm Thuận Bắc, Bình Thuận
+Address before: Trường Phước Trường Tây Hòa Thành Tây Ninh
+Address after: Trường Phước, Trường Tây, Hòa Thành, Tây Ninh
+Address before: 1547/111 Đường 30/4 Phường 12 Vũng Tàu Bà Rịa Vũng Tàu
+Address after: 1547/111 Đường 30/4, Phường 12, Vũng Tàu, Bà Rịa - Vũng Tàu
