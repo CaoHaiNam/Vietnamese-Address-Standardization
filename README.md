@@ -11,7 +11,7 @@ Install requirements packages:
 pip install -r requirements.txt
 ```
 ### Note
-##### Express 2 files norm.zip and NT_norm.zip in folder data, and store in this folder <br>
+##### Download file https://drive.google.com/file/d/19VM318xKvCEW-lgCpTfzZIe_mjnDu5k_/view?usp=sharing, unzip and save as std_address_matrix.npy in Data folder <br>
 
 ### Inference <br>
 ##### Run code in command line:
