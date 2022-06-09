@@ -1,6 +1,8 @@
 import numpy as np
 from Parameters import *
 import CRF
+from transformers import AutoModel, AutoTokenizer
+import torch
 
 # concat origin address vector with fields vector
 def concat(v, field_add_vector):
@@ -22,3 +24,10 @@ def create_field_vector(noisy_add):
 def get_norm_id(sample):
     return list(sample['std_add'].keys())[0]
 
+def encode(model, tokenizer, sent):
+    inputs = tokenizer(sent, return_tensors='pt')
+    with torch.no_grad():
+        outputs = model(**inputs)
+    vector = outputs['pooler_output']
+    vector = torch.nn.functional.normalize(vector, p=2, dim=1).detach().numpy()
+    return vector
