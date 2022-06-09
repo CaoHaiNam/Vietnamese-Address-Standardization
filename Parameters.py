@@ -1,5 +1,4 @@
 import os
-import tensorflow as tf
 WORKING_DIR = os.path.dirname(os.path.abspath(__file__))
 #REMOVE LOG INFOR
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
