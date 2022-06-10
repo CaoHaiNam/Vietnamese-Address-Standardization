@@ -14,6 +14,10 @@ num_negative = 1023
 SNN_layers   = [512, 256, 128]
 MLP_layers   = [64, 32, 16, 8]
 
+PRE_WARD = ['Phường', 'Thị trấn', 'Xã']
+PRE_DISTRICT = ['Quận', 'Huyện', 'Thị xã', 'Thành phố']
+PRE_CITY = ['Thành phố', 'Tỉnh']
+
 #NECESSARY FILE
 NORM_ADDS_FILE         = os.path.join(WORKING_DIR, 'Data/RAT_DATA_MAIN_New_Update.json')
 ID2id_FILE             = os.path.join(WORKING_DIR, 'Data/ID2id_Update.json')
