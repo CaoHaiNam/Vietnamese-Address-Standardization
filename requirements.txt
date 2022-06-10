@@ -1,7 +1,7 @@
 python-crfsuite==0.9.6
 keras==2.3.1
-tensorflow==2.3.0
-numpy==1.18.5
+tensorflow
+numpy
 tensorflow_hub==0.10.0
 bert-for-tf2
 sentence-transformers
