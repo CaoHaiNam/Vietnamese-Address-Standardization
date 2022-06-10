@@ -108,8 +108,9 @@ class AddressStandardization(torch.nn.Module):
         self.embedding_model = embedding_model
 
     def forward(self, raw_ids, raw_mask, raw_entities, std_ids, std_mask, std_entities):
-        raw_vector = torch.cat((self.embedding_model(raw_ids, raw_mask)['last_hidden_state'][:, 0, :], raw_entities), axis=1)
-        std_vector = torch.cat((self.embedding_model(std_ids, std_mask)['last_hidden_state'][:, 0, :], std_entities), axis=1)
+        # raw_vector = torch.cat((self.embedding_model(raw_ids, raw_mask)['last_hidden_state'][:, 0, :], raw_entities), axis=1)
+        # std_vector = torch.cat((self.embedding_model(std_ids, std_mask)['last_hidden_state'][:, 0, :], std_entities), axis=1)
+        
         return torch.nn.CosineSimilarity(dim=1, eps=1e-6)
 
 # norm_embeddings.shape

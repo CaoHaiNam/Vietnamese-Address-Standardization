@@ -8,18 +8,20 @@ PUNCTUATIONS=r"""#$%&'()*+,-.!"/:;<=>?@[\]^_`{|}~"""
 
 # SNN
 dim          = 772
-num_of_norm  = 34481
+# num_of_norm  = 34481
+num_of_norm = 35019
 num_negative = 1023
 SNN_layers   = [512, 256, 128]
 MLP_layers   = [64, 32, 16, 8]
 
 #NECESSARY FILE
-NORM_ADDS_FILE         = os.path.join(WORKING_DIR, 'Data/RAT_DATA_MAIN.json')
-ID2id_FILE             = os.path.join(WORKING_DIR, 'Data/ID2id(1).json')
-id2ID_FILE             = os.path.join(WORKING_DIR, 'Data/id2ID.json')
-id2norm_add_FILE       = os.path.join(WORKING_DIR, 'Data/id2norm_add.json')
+NORM_ADDS_FILE         = os.path.join(WORKING_DIR, 'Data/RAT_DATA_MAIN_New_Update.json')
+ID2id_FILE             = os.path.join(WORKING_DIR, 'Data/ID2id_Update.json')
+id2ID_FILE             = os.path.join(WORKING_DIR, 'Data/id2ID_Update.json')
+id2str_std_add_FILE    = os.path.join(WORKING_DIR, 'Data/id2str_std_add.json')
 NORM_EMBEDDING_FILE    = os.path.join(WORKING_DIR, 'Data/norm.npy')
 NT_NORM_EMBEDDING_FILE = os.path.join(WORKING_DIR, 'Data/NT_norm.npy')
+STD_EMBEDDING_FILE     = os.path.join(WORKING_DIR, 'Data/std_address_matrix.npy')
 
 AD_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/AD_model/SNN_100_epoches.snn')
 Add_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/Add_model/SNN_100_epoches.snn')

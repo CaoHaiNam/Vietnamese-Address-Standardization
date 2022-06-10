@@ -25,7 +25,7 @@ def get_norm_id(sample):
     return list(sample['std_add'].keys())[0]
 
 def encode(model, tokenizer, sent):
-    inputs = tokenizer(sent, return_tensors='pt')
+    inputs = tokenizer(sent, return_tensors='pt', padding=True)
     with torch.no_grad():
         outputs = model(**inputs)
     vector = outputs['pooler_output']
