@@ -212,10 +212,10 @@ def main():
             for step, batch in tqdm(enumerate(train_dataloader)):
                 b_raw_ids = batch[0].to(device)
                 b_raw_mask = batch[1].to(device)
-                b_raw_entity = batch[2].to(device)
+                b_raw_entity = batch[2].to(device).reshape(-1, 4)
                 b_std_ids = batch[3].to(device)
                 b_std_mask = batch[4].to(device)
-                b_std_entity = batch[5].to(device)
+                b_std_entity = batch[5].to(device).reshape(-1, 4)
                 b_labels = batch[6].to(device)
 
                 model.zero_grad()
@@ -256,7 +256,8 @@ def main():
     """
     loss function
     """
-    loss_fn = torch.nn.CosineEmbeddingLoss()
+    # loss_fn = torch.nn.CosineEmbeddingLoss()
+    loss_fn = torch.nn.MSELoss() 
     
     model, optimizer, lr_scheduler = accelerator.prepare(model, optimizer, lr_scheduler)
 
