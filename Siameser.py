@@ -1,16 +1,12 @@
 import unicodedata
 import numpy as np
-import Preprocess
 import Utils
 import Parameters
 import CRF
 import tensorflow as tf
 import keras
-# import LaBSE
 import json
-# import bert
 from sentence_transformers import SentenceTransformer
-# import torch
 import os
 
 
@@ -35,8 +31,6 @@ class Siameser:
             self.embedding_model.save(Parameters.local_embedding_model)
         
         print('Load standard address matrix')
-        # self.norm_embeddings = np.load(NORM_EMBEDDING_FILE, allow_pickle=True)
-        # self.NT_norm_embeddings = np.load(NT_NORM_EMBEDDING_FILE, allow_pickle=True)
         with open(Parameters.STD_EMBEDDING_FILE, 'rb') as f:
             self.std_embeddings = np.load(f)
             self.NT_std_embeddings = np.load(f)
@@ -50,26 +44,43 @@ class Siameser:
         print('Done')
 
     def encode(self, input_text):
-        # vocab_file = self.labse_layer.resolved_object.vocab_file.asset_path.numpy()
-        # do_lower_case = self.labse_layer.resolved_object.do_lower_case.numpy()
-        # tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case)
-        # input_ids, input_mask, segment_ids = LaBSE.create_input(input_text, tokenizer, max_seq_length)
-        # return self.labse_model([input_ids, input_mask, segment_ids])
         return self.embedding_model.encode(input_text)
 
-    def standardize(self, noisy_add):  
-        noisy_add = unicodedata.normalize('NFC', noisy_add)
-        type_add_vector = Utils.create_field_vector(noisy_add)
-        # noisy_add = Preprocess.remove_punctuation(CRF.get_better_add(noisy_add)).lower()
-        noisy_add = Preprocess.remove_punctuation(noisy_add).lower()
-        noisy_add_vector = Utils.concat(np.array(self.encode([noisy_add])), type_add_vector).reshape(Parameters.dim,)
-        noisy_add_vectors = np.full((Parameters.num_of_norm, Parameters.dim), noisy_add_vector)
+    def standardize(self, raw_add):  
+        raw_add = unicodedata.normalize('NFC', raw_add)
+        raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
+        # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
+        raw_add = Utils.remove_punctuation(raw_add).lower()
+        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
+        raw_add_vectors = np.full((Parameters.num_of_norm, Parameters.dim), raw_add_vector)
 
-        if noisy_add == Preprocess.remove_tone_of_text(noisy_add):
-            x = self.model.predict([noisy_add_vectors, self.NT_std_embeddings]).reshape(Parameters.num_of_norm,)
+        if raw_add == Utils.remove_tone_of_text(raw_add):
+            x = self.model.predict([raw_add_vectors, self.NT_std_embeddings]).reshape(Parameters.num_of_norm,)
         else:
-            x = self.model.predict([noisy_add_vectors, self.std_embeddings]).reshape(Parameters.num_of_norm,)
+            x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(Parameters.num_of_norm,)
 
         x = np.argmax(x, axis=0)
         id = str(self.ID2id[str(x)])
         return self.NORM_ADDS[id]['std_add']
+
+    def get_top_k(self, raw_add, k):  
+        raw_add = unicodedata.normalize('NFC', raw_add)
+        type_add_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
+        # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
+        raw_add = Utils.remove_punctuation(raw_add).lower()
+        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), type_add_vector).reshape(Parameters.dim,)
+        raw_add_vectors = np.full((Parameters.num_of_norm, Parameters.dim), raw_add_vector)
+
+        if raw_add == Utils.remove_tone_of_text(raw_add):
+            x = self.model.predict([raw_add_vectors, self.NT_std_embeddings]).reshape(Parameters.num_of_norm,)
+        else:
+            x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(Parameters.num_of_norm,)
+
+        top_k = x.argsort()[-k:][::-1]
+        print(top_k)
+        top_std_adds = []
+        for i in top_k:
+            id = str(self.ID2id[str(i)])
+            top_std_adds.append(self.NORM_ADDS[id]['std_add'])
+        return top_std_adds
+
