@@ -8,6 +8,7 @@ import keras
 import json
 from sentence_transformers import SentenceTransformer
 import os
+# import normalize_vietnamese_typing
 
 
 class Siameser:
@@ -39,7 +40,6 @@ class Siameser:
             with open(Parameters.Ward_STD_EMBEDDING_FILE, 'rb') as f:
                 self.std_embeddings = np.load(f)
                 self.NT_std_embeddings = np.load(f)
-
             
             with open(file=Parameters.Ward_ID2id_FILE, mode='r', encoding='utf-8') as f:
                 self.ID2id = json.load(fp=f)
@@ -48,6 +48,10 @@ class Siameser:
             with open(Parameters.STD_EMBEDDING_FILE, 'rb') as f:
                 self.std_embeddings = np.load(f)
                 self.NT_std_embeddings = np.load(f)
+            # with open('Data/norm.npy', 'rb') as f:
+            #     self.std_embeddings = np.load(f)[:34481]
+            # with open('Data/NT_norm.npy', 'rb') as f:
+            #     self.NT_std_embeddings = np.load(f)[:34481]
 
             
             with open(file=Parameters.ID2id_FILE, mode='r', encoding='utf-8') as f:
@@ -62,8 +66,8 @@ class Siameser:
     def standardize(self, raw_add):  
         raw_add = unicodedata.normalize('NFC', raw_add)
         raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
-        # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        raw_add = Utils.remove_punctuation(raw_add).lower()
+        raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
+        # raw_add = Utils.remove_punctuation(raw_add).lower()
         raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
         raw_add_vectors = np.full((self.num_of_norm, Parameters.dim), raw_add_vector)
 
@@ -77,6 +81,7 @@ class Siameser:
         return self.NORM_ADDS[id]['std_add']
 
     def get_top_k(self, raw_add, k):  
+        # raw_add = normalize_vietnamese_typing.chuan_hoa_dau_cau_tieng_viet(raw_add)
         raw_add = unicodedata.normalize('NFC', raw_add)
         type_add_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
         # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
