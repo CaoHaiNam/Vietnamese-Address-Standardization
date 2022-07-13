@@ -49,8 +49,8 @@ class Siameser:
     def standardize(self, raw_add):  
         raw_add = unicodedata.normalize('NFC', raw_add)
         raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
-        # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        raw_add = Utils.remove_punctuation(raw_add).lower()
+        raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
+        # raw_add = Utils.remove_punctuation(raw_add).lower()
         raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
         raw_add_vectors = np.full((Parameters.num_of_norm, Parameters.dim), raw_add_vector)
 
