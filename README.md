@@ -11,7 +11,7 @@ Install requirements packages:
 pip install -r requirements.txt
 ```
 ### Note
-##### Download file https://drive.google.com/file/d/19VM318xKvCEW-lgCpTfzZIe_mjnDu5k_/view?usp=sharing, unzip and save as std_address_matrix.npy in Data folder <br>
+##### Download file https://drive.google.com/file/d/1H6dr9XrUzskefXCSx0nX0UhL7Z2PiQBV/view?usp=sharing and save as std_address_matrix.npy in Data folder <br>
 
 ### Inference <br>
 ##### Run code in command line:
