@@ -2,7 +2,7 @@
 
 An python client on Vietnamese Address Standardization problem based on deep learning.
 
-Better version is released in branch dev-v0
+**Better version is released in branch dev-v0**
 
 ### Requirements
 
