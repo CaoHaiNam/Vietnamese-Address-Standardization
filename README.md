@@ -2,8 +2,6 @@
 
 An python client on Vietnamese Address Standardization problem based on deep learning.
 
-**Better version (improving both accuracy and inference time) is released in branch dev-v0**
-
 ### Requirements
 
 ##### Python
