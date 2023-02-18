@@ -6,12 +6,13 @@ An python client on Vietnamese Address Standardization problem based on deep lea
 
 ##### Python
 It requires ```python```, ```pip```.
+Python: 3.8 <br>
 Install requirements packages:
 ```sh
 pip install -r requirements.txt
 ```
 ### Note
-##### Download file https://drive.google.com/file/d/1H6dr9XrUzskefXCSx0nX0UhL7Z2PiQBV/view?usp=sharing and save as std_address_matrix.npy in Data folder <br>
+##### Download file https://drive.google.com/file/d/1pJ3cQK-xYRwt2a4PRjI0c0PH0X9Xx6qW/view?usp=sharing and save as std_address_matrix.npy in Resource folder <br>
 
 ### Inference <br>
 ##### Run code in command line:
@@ -24,6 +25,11 @@ add = '150 kim hoa hà nội'
 std_add = std.standardize(add)
 print(std_add)
 ```
+
+### Update 18-02-2023
+This is source code to implement result of our paper. However, model is predicting wrong and I have not found bug yet. <br>
+You could you code to train you own model with you data. Our data is labeled by hand, so I can not share it. I share a small set of data sample in Data folder, you can follow sample to prepare data to train model. <br>
+If you use only for inference, I strongly recommend use API: https://address-standardization.contenteditor.net/. I carried out several improvements, so model using in this API is get better performance as compare to paper's result. <br>
 
 ### Ciation
 ```pyrhon
