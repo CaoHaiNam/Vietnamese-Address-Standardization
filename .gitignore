@@ -1,0 +1,6 @@
+__pycache__
+.pytest_cache
+embedding-model
+problem.txt
+orc
+Data
