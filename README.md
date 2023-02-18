@@ -5,8 +5,8 @@ An python client on Vietnamese Address Standardization problem based on deep lea
 ### Requirements
 
 ##### Python
-It requires ```python```, ```pip```.
-Python: 3.8 <br>
+It requires ```python```, ```pip```. <br>
+Python version: 3.8 <br>
 Install requirements packages:
 ```sh
 pip install -r requirements.txt
