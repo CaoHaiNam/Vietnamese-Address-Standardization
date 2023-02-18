@@ -19,17 +19,17 @@ PRE_DISTRICT = ['Quận', 'Huyện', 'Thị xã', 'Thành phố']
 PRE_CITY = ['Thành phố', 'Tỉnh']
 
 #NECESSARY FILE
-NORM_ADDS_FILE         = os.path.join(WORKING_DIR, 'Data/RAT_DATA_MAIN.json')
-id2str_std_add_FILE    = os.path.join(WORKING_DIR, 'Data/id2str_std_add.json')
+NORM_ADDS_FILE         = os.path.join(WORKING_DIR, 'Resource/RAT_DATA_MAIN.json')
+id2str_std_add_FILE    = os.path.join(WORKING_DIR, 'Resource/id2str_std_add.json')
 # rank in all
-ID2id_FILE             = os.path.join(WORKING_DIR, 'Data/ID2id.json')
-id2ID_FILE             = os.path.join(WORKING_DIR, 'Data/id2ID.json')
-STD_EMBEDDING_FILE     = os.path.join(WORKING_DIR, 'Data/std_address_matrix.npy')
+ID2id_FILE             = os.path.join(WORKING_DIR, 'Resource/ID2id.json')
+id2ID_FILE             = os.path.join(WORKING_DIR, 'Resource/id2ID.json')
+STD_EMBEDDING_FILE     = os.path.join(WORKING_DIR, 'Resource/std_address_matrix.npy')
 
 # only rank from ward level
-Ward_ID2id_FILE             = os.path.join(WORKING_DIR, 'Data/ward_ID2id.json')
-Ward_id2ID_FILE             = os.path.join(WORKING_DIR, 'Data/ward_id2ID.json')
-Ward_STD_EMBEDDING_FILE     = os.path.join(WORKING_DIR, 'Data/ward_std_address_matrix.npy')
+Ward_ID2id_FILE             = os.path.join(WORKING_DIR, 'Resource/ward_ID2id.json')
+Ward_id2ID_FILE             = os.path.join(WORKING_DIR, 'Resource/ward_id2ID.json')
+Ward_STD_EMBEDDING_FILE     = os.path.join(WORKING_DIR, 'Resource/ward_std_address_matrix.npy')
 
 AD_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/AD_model/SNN_100_epoches.snn')
 Add_MODEL_FILE          = os.path.join(WORKING_DIR, 'Model/Add_model/SNN_100_epoches.snn')
