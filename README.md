@@ -27,7 +27,7 @@ print(std_add)
 ```
 
 ### Update 18-02-2023
-This is source code to implement result of our paper. However, model is predicting wrong and I have not found bug yet. <br>
+This is source code to implement result of our paper. However, model is predicting wrong and I have not found bug yet. It would be nice if you can help me fix that.<br>
 You could you code to train you own model with you data. Our data is labeled by hand, so I can not share it. I share a small set of data sample in Data folder, you can follow sample to prepare data to train model. <br>
 If you use only for inference, I strongly recommend use API: https://address-standardization.contenteditor.net/. I carried out several improvements, so model using in this API is get better performance as compare to paper's result. <br>
 
