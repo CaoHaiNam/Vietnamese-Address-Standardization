@@ -67,7 +67,6 @@ class Siameser:
         raw_add = unicodedata.normalize('NFC', raw_add)
         raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
         raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        # raw_add = Utils.remove_punctuation(raw_add).lower()
         raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
         raw_add_vectors = np.full((self.num_of_norm, Parameters.dim), raw_add_vector)
 
@@ -76,6 +75,7 @@ class Siameser:
         else:
             x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(self.num_of_norm,)
 
+        # print(x)
         x = np.argmax(x, axis=0)
         id = str(self.ID2id[str(x)])
         return self.NORM_ADDS[id]['std_add']
@@ -83,10 +83,9 @@ class Siameser:
     def get_top_k(self, raw_add, k):  
         # raw_add = normalize_vietnamese_typing.chuan_hoa_dau_cau_tieng_viet(raw_add)
         raw_add = unicodedata.normalize('NFC', raw_add)
-        type_add_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
-        # raw_add = Preprocess.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        raw_add = Utils.remove_punctuation(raw_add).lower()
-        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), type_add_vector).reshape(Parameters.dim,)
+        raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
+        raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
+        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
         raw_add_vectors = np.full((self.num_of_norm, Parameters.dim), raw_add_vector)
 
         if raw_add == Utils.remove_tone_of_text(raw_add):
@@ -94,6 +93,7 @@ class Siameser:
         else:
             x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(self.num_of_norm,)
 
+        # print(x)
         top_k = x.argsort()[-k:][::-1]
         # print(top_k)
         top_std_adds = []
