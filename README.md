@@ -26,8 +26,7 @@ k = 10
 std_adds = std.get_top_k(add, k)
 print(std_adds)
 ```
-
-* API inference <br>
+### API inference
 https://huggingface.co/spaces/CaoHaiNam/address-standardization
 
 ## Ciations
