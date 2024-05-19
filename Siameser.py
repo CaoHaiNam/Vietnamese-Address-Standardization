@@ -1,104 +1,94 @@
 import unicodedata
-import numpy as np
+import torch
 import Utils
 import Parameters
-import CRF
-import tensorflow as tf
-import keras
 import json
 from sentence_transformers import SentenceTransformer
 import os
-# import normalize_vietnamese_typing
+import torch.nn.functional as F
 
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
+device = torch.device('cpu')
 
 class Siameser:
-    def __init__(self, model_name, ranking_level=None):
-        print('Load model')
-        if model_name == 'AD':
-            self.model = tf.keras.models.load_model(Parameters.AD_MODEL_FILE)
-        elif model_name == 'Add':
-            self.model = tf.keras.models.load_model(Parameters.Add_MODEL_FILE)
-        elif model_name == 'Merge':
-            self.model = tf.keras.models.load_model(Parameters.Merge_MODEL_FILE)
-        elif model_name == 'ElementWise':
-            self.model = tf.keras.models.load_model(Parameters.ElementWise_MODEL_FILE)
-        
+    def __init__(self, model_name=None, stadard_scope=None):
+        # print('Load model')
         print("Load sentence embedding model (If this is the first time you run this repo, It could be take time to download sentence embedding model)")
-        # self.labse_model, self.labse_layer = LaBSE.get_model(model_url, max_seq_length)
+        self.threshold = 0.61
         if os.path.isdir(Parameters.local_embedding_model):
-            self.embedding_model = SentenceTransformer(Parameters.local_embedding_model)
+            self.embedding_model = SentenceTransformer(Parameters.local_embedding_model).to(device)
         else:
-            self.embedding_model = SentenceTransformer(Parameters.embedding_model)
+            self.embedding_model = SentenceTransformer(Parameters.embedding_model).to(device)
             self.embedding_model.save(Parameters.local_embedding_model)
 
-        print('Load standard address')
-        with open(file=Parameters.NORM_ADDS_FILE, mode='r', encoding='utf-8') as f:
-            self.NORM_ADDS = json.load(fp=f)
-        
-        if ranking_level == 'ward':
+        if stadard_scope == 'all':
+            print('Load standard address')
+            with open(file=Parameters.NORM_ADDS_FILE_ALL_1, mode='r', encoding='utf-8') as f:
+                self.NORM_ADDS = json.load(fp=f)
+
             print('Load standard address matrix')
-            with open(Parameters.Ward_STD_EMBEDDING_FILE, 'rb') as f:
-                self.std_embeddings = np.load(f)
-                self.NT_std_embeddings = np.load(f)
-            
-            with open(file=Parameters.Ward_ID2id_FILE, mode='r', encoding='utf-8') as f:
-                self.ID2id = json.load(fp=f)
+            embedding = torch.load(Parameters.STD_EMBEDDING_FILE_ALL_1)
+            self.std_embeddings = embedding['accent_matrix'].to(device)
+            self.NT_std_embeddings = embedding['noaccent_matrix'].to(device)
         else:
+            print('Load standard address')
+            with open(file=Parameters.NORM_ADDS_FILE_HN_HCM, mode='r', encoding='utf-8') as f:
+                self.NORM_ADDS = json.load(fp=f)
+
             print('Load standard address matrix')
-            with open(Parameters.STD_EMBEDDING_FILE, 'rb') as f:
-                self.std_embeddings = np.load(f)
-                self.NT_std_embeddings = np.load(f)
-            # with open('Data/norm.npy', 'rb') as f:
-            #     self.std_embeddings = np.load(f)[:34481]
-            # with open('Data/NT_norm.npy', 'rb') as f:
-            #     self.NT_std_embeddings = np.load(f)[:34481]
+            embedding = torch.load(Parameters.STD_EMBEDDING_FILE_HN_HCM)
+            self.std_embeddings = embedding['accent_matrix'].to(device)
+            self.NT_std_embeddings = embedding['noaccent_matrix'].to(device)
 
-            
-            with open(file=Parameters.ID2id_FILE, mode='r', encoding='utf-8') as f:
-                self.ID2id = json.load(fp=f)
-
-        self.num_of_norm = len(self.ID2id)        
+        self.num_std_add = self.std_embeddings.shape[0]
         print('Done')
 
-    def encode(self, input_text):
-        return self.embedding_model.encode(input_text)
-
-    def standardize(self, raw_add):  
-        raw_add = unicodedata.normalize('NFC', raw_add)
-        raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
-        raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
-        raw_add_vectors = np.full((self.num_of_norm, Parameters.dim), raw_add_vector)
-
-        if raw_add == Utils.remove_tone_of_text(raw_add):
-            x = self.model.predict([raw_add_vectors, self.NT_std_embeddings]).reshape(self.num_of_norm,)
+    def standardize(self, raw_add_):
+        raw_add = unicodedata.normalize('NFC', raw_add_).lower()
+        raw_add = Utils.remove_punctuation(raw_add)
+        raw_add_vector = self.embedding_model.encode(raw_add, convert_to_tensor=True).to(device)
+        raw_add_vectors = raw_add_vector.repeat(self.num_std_add, 1)
+        if raw_add == Utils.remove_accent(raw_add):
+            score = F.cosine_similarity(raw_add_vectors, self.NT_std_embeddings)
         else:
-            x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(self.num_of_norm,)
+            score = F.cosine_similarity(raw_add_vectors, self.std_embeddings)
+        s, top_k = score.topk(1)
+        # print(s, top_k)
+        # return
+        s, idx = s.tolist()[0], top_k.tolist()[0]
+        # if s < 0.57:
+        if s < self.threshold:
+            return {'Format Error': 'Xâu truyền vào không phải địa chỉ, mời nhập lại.'}
+        std_add = self.NORM_ADDS[str(idx)]
+        return Utils.get_full_result(raw_add_, std_add, round(s, 4))
 
-        # print(x)
-        x = np.argmax(x, axis=0)
-        id = str(self.ID2id[str(x)])
-        return self.NORM_ADDS[id]['std_add']
-
-    def get_top_k(self, raw_add, k):  
-        # raw_add = normalize_vietnamese_typing.chuan_hoa_dau_cau_tieng_viet(raw_add)
-        raw_add = unicodedata.normalize('NFC', raw_add)
-        raw_ent_vector = Utils.gen_entity_vector_from_raw_add(raw_add)
-        raw_add = Utils.remove_punctuation(CRF.get_better_add(raw_add)).lower()
-        raw_add_vector = Utils.concat(np.array(self.encode([raw_add])), raw_ent_vector).reshape(Parameters.dim,)
-        raw_add_vectors = np.full((self.num_of_norm, Parameters.dim), raw_add_vector)
-
-        if raw_add == Utils.remove_tone_of_text(raw_add):
-            x = self.model.predict([raw_add_vectors, self.NT_std_embeddings]).reshape(self.num_of_norm,)
+    def get_top_k(self, raw_add_, k):
+        raw_add = unicodedata.normalize('NFC', raw_add_).lower()
+        raw_add = Utils.remove_punctuation(raw_add)
+        raw_add_vector = self.embedding_model.encode(raw_add, convert_to_tensor=True).to(device)
+        raw_add_vectors = raw_add_vector.repeat(self.num_std_add, 1)
+        if raw_add == Utils.remove_accent(raw_add):
+            score = F.cosine_similarity(raw_add_vectors, self.NT_std_embeddings)
         else:
-            x = self.model.predict([raw_add_vectors, self.std_embeddings]).reshape(self.num_of_norm,)
+            score = F.cosine_similarity(raw_add_vectors, self.std_embeddings)
+        s, top_k = score.topk(k)
+        s, top_k = s.tolist(), top_k.tolist()
+        # print(s, top_k)
+        # return
 
-        # print(x)
-        top_k = x.argsort()[-k:][::-1]
-        # print(top_k)
+        if s[0] < self.threshold:
+            return {'Format Error': 'Dường như xâu truyền vào không phải địa chỉ, mời nhập lại.'}, {}
+
         top_std_adds = []
-        for i in top_k:
-            id = str(self.ID2id[str(i)])
-            top_std_adds.append(self.NORM_ADDS[id]['std_add'])
-        return top_std_adds
+        for score, idx in zip(s, top_k):
+            std_add = self.NORM_ADDS[str(idx)]
+            top_std_adds.append(Utils.get_full_result(raw_add_, std_add, round(score, 4)))
 
+        x1, x2 = top_std_adds[0], top_std_adds[1]
+
+        # if x1['similarity_score'] == x2['similarity_score'] and 'Đường/Phố' in x2['main_address']:
+        #         return x2, [x2] + [x1] + top_std_adds[2:]
+
+        return top_std_adds[0], top_std_adds
+        # return '\n'.join([str(i) for i in top_std_adds])
