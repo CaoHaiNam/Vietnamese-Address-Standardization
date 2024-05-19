@@ -1,11 +1,7 @@
-ipykernel
-python-crfsuite==0.9.6
-keras==2.3.1
-tensorflow==2.3.0
 numpy
-tensorflow_hub==0.10.0
 sentence-transformers
 transformers
 tqdm
 torch
-gast
+flake8
+gradio
