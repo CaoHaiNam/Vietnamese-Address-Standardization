@@ -4,3 +4,4 @@ embedding-model
 flagged
 logs
 .ipynb_checkpoints
+*.pt
