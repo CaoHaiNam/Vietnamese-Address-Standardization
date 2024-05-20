@@ -39,7 +39,7 @@ def remove_accent(text):
 # remove functuation
 def remove_punctuation(text):
 
-    punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
+    punctuation = """!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
     whitespace = ' '
     for i in text:
         if i in punctuation:

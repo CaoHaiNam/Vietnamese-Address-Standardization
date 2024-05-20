@@ -6,6 +6,7 @@ import json
 from sentence_transformers import SentenceTransformer
 import os
 import torch.nn.functional as F
+import gen_std_address_matrix
 
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
@@ -26,6 +27,9 @@ class Siameser:
             print('Load standard address')
             with open(file=Parameters.NORM_ADDS_FILE_ALL_1, mode='r', encoding='utf-8') as f:
                 self.NORM_ADDS = json.load(fp=f)
+            
+            if not os.path.isfile(Parameters.STD_EMBEDDING_FILE_ALL_1):
+                gen_std_address_matrix.gen_matrix()
 
             print('Load standard address matrix')
             embedding = torch.load(Parameters.STD_EMBEDDING_FILE_ALL_1)
