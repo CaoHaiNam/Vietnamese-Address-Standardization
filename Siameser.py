@@ -29,7 +29,7 @@ class Siameser:
                 self.NORM_ADDS = json.load(fp=f)
             
             if not os.path.isfile(Parameters.STD_EMBEDDING_FILE_ALL_1):
-                gen_std_address_matrix.gen_matrix()
+                gen_std_address_matrix.gen_matrix(self.embedding_model)
 
             print('Load standard address matrix')
             embedding = torch.load(Parameters.STD_EMBEDDING_FILE_ALL_1)

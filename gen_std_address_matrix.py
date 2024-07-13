@@ -2,14 +2,11 @@ import Parameters
 import Utils
 import json
 import torch
-from sentence_transformers import SentenceTransformer
-
-embedding_model = SentenceTransformer(Parameters.local_embedding_model)
 
 std_add = json.load(
     open(Parameters.NORM_ADDS_FILE_ALL_1, "r", encoding="utf8")
 )
-def gen_matrix():
+def gen_matrix(embedding_model):
     accent_addresses, unaccent_addresses = [], []
     for i in std_add:
         # print(std_add[i])
